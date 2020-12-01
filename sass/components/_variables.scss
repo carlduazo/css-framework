@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// Base text 
+$font-family: 								"Poppins", sans-serif;
+$font-size:									13px;
+$font-small:								0.85em;
+$font-weight: 								normal;
+$text-color:								#5e5e5e;
+
+// Base colors
+$brand-red:									#eb4549; //Base color RED
+$brand-blue:								#2f75bb; //Base color BLUE
+$brand-sky-blue:							#6ed4f7; //Base color SKY BLUE
+$brand-green:								#37bd9b; //Base color GREEN
+$brand-orange:								orange; //Base color ORANGE
+$brand-white:								#ffffff; //Base color WHITE
+$brand-gray:								#656565; //Base color GRAY
+$brand-light-gray:							#a8a8a8; //Base color LIGHT GRAY
+$brand-bg-light-gray:						#f3f6f9; //Base color LIGHT GRAY
+$brand-ultra-light-gray:					#dfdfdf; //Base color LIGHT GRAY
+$brand-dark-gray:							#000000; //Base color DARK GRAY
+
+//Light Colors
+$brand-light-blue:							lighten(#2f75bb, 45%);
+$divider-color: 							#ebedf3;
+// Body
+// $base-body-background:						#e7e8f1 !default; //Base background color of body
+$base-body-background:						#f7f7f7 !default; //Base background color of body
+
+//Headings
+$h1-size:									3em !default;
+$h2-size:									2.5em !default;
+$h3-size:									2em !default;
+$h4-size:									1.5em !default;
+$h5-size:									1.3em !default;
+$h6-size:									1.1em !default;
+
+// Forms
+$input-height:								50px !default;
+$input-height-small:						35px !default;
+$input-height-small:						35px !default;
+$input-height-large:						70px !default;
+
+$input-border-color:						#e5e5e5 !default; //Base border color of TEXTBOX
+$input-font-size:								13px !default;
+
+//Sidebarr
+$sidebar-background: 						#ffffff;
+
+//navbar
+$navbar-background: 						linear-gradient(147.04deg, #2f75bc 0.74%, #265f9a 99.61%);
+
+//Animation
+$transition:                				all 0.3s ease !default; // Default transition interval
+
+//Button
+$button-font-size:							13px !default;
+
+//Border-radius
+$default-border-radius: 					0px !default;

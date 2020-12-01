@@ -1,0 +1,36 @@
+.pricing-table{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 20px auto 0 auto;
+	justify-content: center;
+	align-items: left;
+	.pricing-column{
+		border: solid $brand-ultra-light-gray 1px;
+		border-radius: $default-border-radius;
+		flex-basis: 31%;
+		margin-bottom: 20px;
+		padding: 30px 25px;
+		margin: 10px;
+		transition: $transition;
+		.features{
+			flex-grow: 1;
+		}
+
+		&.active{
+			background: $brand-blue;
+			color: $brand-white;
+			transform: scale(1.06);
+			h4, .icon{
+				color: $brand-white;
+			}
+		}
+	}
+
+}
+
+@media(min-width: 1500px){
+	.pricing-table .pricing-column{
+		flex-basis: 23%;
+	}
+}

@@ -1,0 +1,318 @@
+.ui.selection.dropdown{
+	border-radius: $default-border-radius;
+    min-height: 45px;
+    display: block;
+    border: solid $input-border-color 1px;
+    padding: 14px;
+    padding-right: 30px;
+	font-size: $input-font-size;
+	min-width: 100%;
+	
+	&.small{
+		min-height: 30px;
+	    padding: 10px;
+	    /* min-width: auto; */
+	    padding-right: 25px;
+
+	    &> .dropdown.icon{
+	    	top: 9px;
+	    }
+	}
+
+    &.alt-field{
+    	display: none;
+    }
+
+    &.extra-width{
+    	position: relative;
+    	&.active.visible:before{
+			content: "";
+		    border-bottom: solid #fff 1px;
+		    position: absolute;
+		    z-index: 45;
+		    width: 100%;
+		    left: 0;
+		    bottom: -1px;
+		    background: #fff;
+    	}
+    	.menu{
+		    min-width: 250px;
+			border-top: 1px solid #bfbfbf !important;
+    	}
+    }
+
+    &.multiple{
+    	padding: 8px 15px;
+		&.search > input.search{
+			padding: 0px 0px;
+		}
+
+		.ui.label{
+			background: $divider-color;
+			font-size: 0.85em;
+			&>.flex{
+				display: inline-block;
+			}
+			.img-item, .sub-text{
+				display: none;
+			}
+		}
+
+		.icon.delete{
+			margin-left: 5px;
+			font-family: 'Line Awesome Free';
+    		font-weight: 900;
+			-webkit-font-smoothing: antialiased;
+		    display: inline-block;
+		    font-style: normal;
+		    font-variant: normal;
+		    text-rendering: auto;
+		    line-height: 1;
+
+	    &:before{
+	    		content: "\f00d";
+			}
+	    }
+    }
+
+    .ui.inline.loader.active{
+    	position: absolute;
+	    right: 10px;
+	    left: auto;
+	    top: 10px;
+    }
+}
+
+.ui.upward.selection.dropdown.visible{
+	border-radius: $default-border-radius !important;
+}
+
+.ui.selection.dropdown:hover,
+.ui.selection.dropdown:focus{
+	border: solid $input-border-color 1px;
+}
+.ui.selection.dropdown:focus .menu,
+.ui.selection.active.dropdown.active,
+.ui.selection.active.dropdown.active:hover{
+	border-color: darken($input-border-color, 15%);
+}
+
+.ui.selection.active.dropdown .menu,
+.ui.selection.active.dropdown:hover .menu{
+	border-color: darken($input-border-color, 15%);
+	border-radius: $default-border-radius;
+}
+
+.ui.selection.dropdown .menu > .item{
+	padding: 14px !important;
+	color: $text-color;
+}
+
+.ui.dropdown > .text{
+	color: $text-color;
+	padding-bottom: 2px;
+	margin-bottom: -2px;
+}
+
+.ui.single.selection.dropdown > .text{
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.ui.dropdown:not(.button) > .default.text, .ui.default.dropdown:not(.button) > .text{
+	color: #cfcfcf;
+    font-weight: 300;
+}
+
+.ui.dropdown .menu .active.item{
+	background: none;
+	font-weight: 600;
+}
+
+.ui.selection.visible.dropdown > .text:not(.default){
+	color: $text-color;
+}
+
+.ui.selection.dropdown > .text:not(.default) > .sub-text{
+	display: inline;
+	padding-left: 5px;
+	font-size: 13px;
+	&:before{
+		content: "< "
+	}
+
+	&:after{
+		content: " >"
+	}
+}
+
+.ui.selection.dropdown > .text:not(.default) .sub-text{
+	display: inline;
+	padding-left: 5px;
+	font-size: 13px;
+	&:before{
+		content: "< "
+	}
+
+	&:after{
+		content: " >"
+	}
+}
+
+.ui.selection.dropdown > .text:not(.default){
+	.img-item{
+		display: none;
+	}
+
+}
+
+.ui.selection.dropdown > .dropdown.icon{
+	top: 13px;
+}
+
+.ui.search.selection.dropdown > input.search{
+	padding: 14px 15px;
+	font-size: $input-font-size;
+	color: $text-color;
+}
+
+.form.error{
+	.ui.selection.dropdown{
+		border: solid $brand-red 1px;
+	}
+
+	.ui.selection.dropdown:hover,
+	.ui.selection.dropdown:focus{
+		border: solid $brand-red 1px;
+	}
+
+	.ui.selection.dropdown:focus .menu,
+	.ui.selection.active.dropdown.active,
+	.ui.selection.active.dropdown.active:hover{
+		border-color: $brand-red;
+	}
+
+	.ui.selection.active.dropdown .menu, 
+	.ui.selection.active.dropdown:hover .menu{
+		border-color: $brand-red;
+	}
+
+	.ui.dropdown:not(.button) > .default.text, .ui.default.dropdown:not(.button) > .text{
+		color: lighten($brand-red, 30%);
+	}
+}
+.form.error{
+	.ui.selection.dropdown.no-error{
+		border: solid $input-border-color 1px;
+	}
+
+	.ui.selection.dropdown.no-error:hover,
+	.ui.selection.dropdown.no-error:focus{
+		border: solid $input-border-color 1px;
+	}
+
+	.ui.selection.dropdown.no-error:focus .menu,
+	.ui.selection.active.dropdown.no-error.active,
+	.ui.selection.active.dropdown.no-error.active:hover{
+		border-color: darken($input-border-color, 15%);
+	}
+
+	.ui.selection.active.dropdown.no-error .menu, 
+	.ui.selection.active.dropdown.no-error:hover .menu{
+		border-color: darken($input-border-color, 15%);
+	}
+
+	.ui.dropdown.no-error:not(.button) > .default.text, .ui.default.dropdown.no-error:not(.button) > .text{
+		color: lighten($brand-red, 30%);
+	}
+}
+
+.ui.dropdown.button.blue{
+	transition: $transition;
+	& > .text{
+		color: $brand-white;
+	}
+
+	& > .left.menu{
+		right: -2px !important;
+	    margin-top: 2px;
+	    border-radius: 0;
+
+	    &>.item{
+	    	font-size: 13px;
+	    	color: $text-color;
+	    	transition: $transition;
+	    }
+	}
+}
+
+
+.ui.dropdown.text-dropdown{
+	transition: $transition;
+	&>.menu{
+		&>.item{
+	    	font-size: 13px;
+	    	color: $text-color;
+	    	transition: $transition;
+	    }
+	}
+	& > .left.menu{
+		right: -2px !important;
+	    margin-top: 2px;
+	    border-radius: 0;
+	}
+
+	.ui.checkbox .box:before, .ui.checkbox label:before{
+	    width: 15px;
+	    height: 15px;
+	}
+
+	.ui.checkbox .box:after, .ui.checkbox label:after{
+		width: 15px;
+    	height: 15px;
+    	font-size: 15px;
+	}
+
+	.ui.checkbox .box, .ui.checkbox label{
+		padding-left: 25px;
+	}
+}
+
+.ui.dropdown .menu > .header{
+	margin: 0;
+	color: $brand-light-gray;
+	font-weight: 600;
+	font-size: 1em;
+    padding: 10px 1.14285714rem!important;
+}
+
+.ui.dropdown.button.negative{
+	
+	transition: $transition;
+	& > .menu{
+		border-radius: 0;
+
+		&>.item{
+	    	font-size: 13px;
+	    	color: $text-color;
+	    	transition: $transition;
+	    }
+	}
+	& > .left.menu{
+		right: -2px !important;
+	    margin-top: 2px;
+	    border-radius: 0;
+
+    	
+	}
+}
+
+.ui.disabled.search{
+	opacity: 0.65;
+}
+
+.ui.single.fluid.selection.dropdown > .text{
+	white-space: normal;
+}

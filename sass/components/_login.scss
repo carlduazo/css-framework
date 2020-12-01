@@ -1,0 +1,299 @@
+.login-app{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	// border: solid red 1px;
+	display: flex;
+	overflow: hidden;
+}
+
+.login-wrap{
+	position: relative;
+	display: flex;
+	// border: solid blue 1px;
+	width: 100%;
+	min-height: 100vh;
+	margin: auto;
+	.left-wing{
+		position: fixed;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+		width: 100%;
+		max-width: 600px;
+		background: #ebfdff;
+		// background: linear-gradient(147.04deg,#ca7b70 .74%,#5a2119 99.61%);
+		// background: linear-gradient(147.04deg, #2f75bc 0.74%, #1a3d61 99.61%);
+		background: linear-gradient(270deg, #dafbff, #ffe3b1, #dafbff);
+    	background-size: 800% 800%;
+
+	    -webkit-animation: MovingGradient 20s ease infinite;
+	    -moz-animation: MovingGradient 20s ease infinite;
+	    animation: MovingGradient 20s ease infinite;
+
+	    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+
+        cursor: not-allowed;
+    	pointer-events: none;
+
+	    &.night{
+	    	background: linear-gradient(270deg, #22203e, #242b79, #22203e);
+	    	background-size: 800% 800%;
+	    	-webkit-animation: MovingGradient 7s ease infinite;
+		    -moz-animation: MovingGradient 7s ease infinite;
+		    animation: MovingGradient 7s ease infinite;
+	    }
+
+	    .quote{
+			color: #345a80;
+		    font-weight: bold;
+		    font-size: 35px;
+		    text-align: left;
+	    	&.night-quote{
+	    		color: #fff;
+	    	}
+	    }
+
+	    .night-city{
+	    	opacity: 0.7;
+	    }
+	}
+
+	.cloud-1{
+		animation: connect-hover 7s ease-in-out infinite alternate;
+	}
+
+	.cloud-2{
+		animation: connect-hover 4s ease-in-out infinite alternate;
+	}
+
+	.cloud-3{
+		animation: connect-hover 6s ease-in-out infinite alternate;
+	}
+
+	.cloud-4{
+		animation: connect-hover 5s ease-in-out infinite alternate;
+	}
+
+	.cloud-5{
+		animation: connect-hover 7s ease-in-out infinite alternate;
+	}
+
+	.sun{
+		top: -100px;
+			-webkit-animation: spin 30s infinite linear
+	}
+	
+	.star-1{
+		 -moz-animation: blink normal 1s infinite ease-in-out; /* Firefox */
+	    -webkit-animation: blink normal 1s infinite ease-in-out; /* Webkit */
+	    -ms-animation: blink normal 1s infinite ease-in-out; /* IE */
+	    animation: blink normal 1s infinite ease-in-out; /* Opera and prob css3 final iteration */
+	}
+
+	.star-2{
+		 -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+	    -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+	    -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+	    animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+	}
+
+	.cloud{
+		margin-top: auto;
+		 position: absolute; 
+		 top: 0; 
+		 left: 0;
+	}
+	.login-logo-container{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.login-logo{
+		width: 100%;
+		max-width: 250px;
+		height: auto;
+	}
+
+	.right-wing{
+		position: relative;
+		left: 600px;
+		width: calc(100% - 600px);
+		display: flex;
+		overflow: hidden;
+		.login-form{
+			margin: auto;
+			width: 100%;
+			max-width: 600px;
+    		padding: 30px;
+
+			.field{
+				height: 60px;
+				border-radius: $default-border-radius;
+				background: $input-border-color;
+				font-size: 1.2em;
+
+				&:focus{
+					background: #fff;
+				}
+			}
+
+			.form{
+				margin-bottom: 20px;
+
+				.form-label{
+					font-size: 1.1em;
+					font-weight: 600;
+				}
+			}
+
+			.form.right-icon{
+				.field{
+					padding-right: 45px;
+				}
+				.r-icon{
+					font-size: 2.2em;
+    				top: 40px;
+				}
+			}
+
+			.button{
+				border-radius: $default-border-radius;
+				height: 60px;
+				font-size: 1.2em;
+				padding: 10px 40px;
+			}
+
+			.notification-login{
+				span{
+					
+					&.error{
+						display: block;
+						margin: -10px 0 10px 0;
+					color: $brand-red;
+					}
+				}
+
+				position: relative;
+				left: auto;
+				bottom: auto;
+				top: auto;
+			}
+		}
+
+		.forgot-link{
+			text-align: right;
+			flex: 1;
+			margin: auto;
+			color: $brand-blue;
+			font-weight: 600;
+		}
+
+		.get-help{
+			padding: 20px 30px;
+		}
+	}
+
+	.logo-square{
+		padding: 0 60px;
+    	margin-top: 60px;
+
+    	img{
+    		width: 150px;
+    	}
+	}
+
+	.footer-login{
+		padding-top: 10px;
+		border-top: dotted 1px $input-border-color;
+
+		.flex-footer{
+			align-items: center;
+    		justify-content: center;
+		}
+
+		.cortex-logo{
+			width: 70px;
+		}
+	}
+}
+
+.ripple-green{
+	
+	    animation: at-ripple-green 0.5s linear infinite;
+}
+
+.ripple-red{
+	
+	    animation: at-ripple-red 0.5s linear infinite;
+}
+
+@-webkit-keyframes MovingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes MovingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes MovingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@-webkit-keyframes connect-hover{
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	to {
+		-webkit-transform: translateY(15px);
+		transform: translateY(15px);
+	}
+}
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+@media screen and (max-width: 1440px) {
+	.login-wrap .left-wing{
+		max-width: 500px;
+	}
+
+	.login-wrap .right-wing .login-form{
+		max-width: 500px;
+	}
+
+	.login-wrap .left-wing .quote{
+		font-size: 29px;
+	}
+
+	.login-wrap .right-wing{
+		left: 500px;
+		width: calc(100% - 500px);
+	}
+}

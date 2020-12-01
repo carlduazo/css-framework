@@ -1,0 +1,200 @@
+nav{
+	height: 65px;
+	max-height: 65px;
+	width: calc(100vw - 260px);
+	background: $brand-white;
+	border-bottom: solid $divider-color 1px;
+	padding: 0 30px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 1902;
+	position: fixed;
+	left: 260px;
+	box-shadow: 0 10px 30px 0 rgba(82,63,105,.08);
+
+	.nav-group{
+		.item{
+			height: 65px;
+			min-width: 65px;
+			display: flex;
+			padding: 0 15px;
+			border-left: solid $divider-color 1px;
+			transition: $transition;
+			position: relative;
+			&:first-child{
+				border-left: 0;
+			}
+
+			&:hover{
+				background: $divider-color;
+
+				.icon-nav-menu{
+					color: $text-color;
+				}
+			}
+			.user{
+				display: flex;
+				margin: auto;
+				.user-image{
+					width: 45px;
+					height: 45px;
+					background: #37bd9b;
+					display: flex;
+					border-radius: $default-border-radius;
+					.abr-init{
+						margin: auto;
+						color: #fff;
+						font-size: 1.4em;
+						opacity: 0.7;
+					}
+				}
+
+				.welcome-name{
+					margin: auto;
+					margin-right: 10px;
+				}
+			}
+
+			.icon-nav-menu{
+				margin: auto;
+				font-size: 1.9em;
+				color: $brand-light-gray;
+			}
+
+			.notif-counter{
+				background: $brand-red;
+				color: #fff;
+				border-radius: 50%;
+				width: 18px;
+				height: 18px;
+				position: absolute;
+				font-size: 0.6em;
+				display: flex;
+				top: calc(50% - 2em);
+				left: 50%;
+				span{
+					margin: auto;
+				}
+			}
+		}
+	}
+
+	&.dark{
+		background: #22203e;
+		.breadcrumb a,
+		.breadcrumb .section.active{
+			    color: rgba(255, 255, 255, 0.6);
+		}
+
+		.nav-group .item{
+			    border-left: solid rgba(255, 255, 255, 0.11) 1px;
+			        color: rgba(255, 255, 255, 0.6);
+		}
+
+		.nav-group .item .icon-nav-menu{
+			    color: rgba(255, 255, 255, 0.6);
+		}
+
+		.nav-group .item:hover,
+		.nav-group .item:hover .icon-nav-menu{
+			background: #184e86;
+			color: #fff;
+		}
+	}
+}
+
+.drawer{
+	width: 375px;
+    height: 100vh;
+    background: $brand-white;
+    position: fixed;
+    z-index: 99999;
+    right: 0;
+    -webkit-box-shadow: 0 1px 9px -3px rgba(0,0,0,.25);
+    box-shadow: 0 1px 9px -3px rgba(0,0,0,.25);
+    transition: $transition;
+    right: -375px;
+
+
+    &.toggled{
+		transform: translateX(-375px);
+    }
+    .toggle-drawer{
+    	height: 30px;
+    	width: 30px;
+    	padding: 3px;
+    	position: absolute;
+    	right: 20px;
+    }
+	.group{
+		position: relative;
+		height: 100vh;
+		 padding: 30px;
+		overflow: auto;
+	}
+    .user-image{
+    	width: 100px;
+    	height: 100px;
+    	border-radius: $default-border-radius;
+    }
+
+    .item{
+    	padding: 20px 0;
+     	border-bottom: dashed $divider-color 1px;
+
+     	&:last-of-type{
+     		border-bottom: 0;
+     	}
+    }
+
+    .user-menu{
+    	a:hover{
+    		color: $brand-blue;
+    	}
+    }
+
+    .icon-wrap{
+    	width: 40px;
+    	height: 40px;
+    	border-radius: $default-border-radius;
+    	background: lighten($brand-blue, 45%);
+    	margin-right: 10px;
+    	display: flex;
+		color: $brand-blue;
+    	.icon{
+    		margin: auto; 
+    		font-size: 1.5em;
+    	}
+    }
+
+    .notif-card{
+    	padding: 10px;
+    	border: solid $divider-color 1px;
+    	background: #f7f7f7;
+    	border-radius: $default-border-radius;
+    }
+
+    &.dark{
+    	background: #1d1a35;
+    	border-left: solid rgba(255, 255, 255, 0.5) 1px;
+    	color: rgba(255, 255, 255, 0.6);
+
+    	.notif-card{
+    		border: solid #3a3562 1px;
+    		background: #3a3563;
+
+    		.blue-color{
+    			color: rgba(255, 255, 255, 0.6);
+    		}
+    	}
+
+    	.icon-wrap,
+    	.button.light-blue,
+    	.button.light-gray{
+    		background: #3a3563;
+    		border-color: #3a3563;
+    		color: rgba(255, 255, 255, 0.6);
+    	}
+    }
+}

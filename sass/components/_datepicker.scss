@@ -1,0 +1,49 @@
+.daterangepicker .drp-buttons .btn{
+	font-weight: normal;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover{
+	background: $brand-blue;
+}
+
+.daterangepicker{
+	font-family: $font-family;
+	z-index: 1901;
+	 -webkit-box-shadow: 0px 2px 3px 0px rgba(34, 36, 38, 0.15);
+            box-shadow: 0px 2px 3px 0px rgba(34, 36, 38, 0.15);
+	th{
+		font-weight: 600;
+	}
+}
+
+.daterangepicker td.end-date,
+.daterangepicker td.start-date{
+	border-radius: 0;
+}
+
+.timerange-cont{
+	padding: 30px 20px 20px 20px !important;
+	position: relative;
+
+	&.left:before{
+		content: "From";
+		position: absolute;
+		font-size: 0.8em;
+		top: 18px;
+    	left: 20px;
+    	font-weight: 500;
+	}
+
+	&.right{
+		border-left: solid #ddd 1px;
+	}
+
+	&.right:before{
+		content: "To";
+		position: absolute;
+		font-size: 0.8em;
+		top: 18px;
+    	left: 20px;
+    	font-weight: 500;
+	}
+}

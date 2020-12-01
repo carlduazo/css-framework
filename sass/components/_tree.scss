@@ -1,0 +1,171 @@
+.jstree-default .jstree-closed > .jstree-ocl{
+	background-image: none;
+	font-family: 'Line Awesome Free';
+    font-weight: 900;
+	-webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.44;
+	font-size: 1.2em;
+	    margin-top: 5px;
+    &:before{
+    	content: "\f105";
+    }
+}
+
+.jstree-default .jstree-open > .jstree-ocl{
+	background-image: none;
+	font-family: 'Line Awesome Free';
+    font-weight: 900;
+	-webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.44;
+	font-size: 1.2em;
+	    margin-top: 5px;
+    &:before{
+    	content: "\f107";
+    }
+}
+
+.jstree-default .jstree-icon.jstree-themeicon{
+	display: none;
+}
+
+.jstree-default .jstree-hovered:not(.jstree-clicked){
+	background: $divider-color;
+}
+
+.jstree-default .jstree-clicked{
+	background: $brand-light-blue;
+	position: relative;
+	padding-right: 65px !important;
+
+	box-shadow: none;
+	&:after{
+		font-family: 'Line Awesome Free';
+	    font-weight: 900;
+		-webkit-font-smoothing: antialiased;
+	    display: inline-block;
+	    font-style: normal;
+	    font-variant: normal;
+	    text-rendering: auto;
+	    line-height: 1.44;
+		font-size: 1.2em;
+		content: "\f00c";
+		margin-right: 5px;
+		margin-left: 5px;
+		color: $brand-green;
+	}
+
+	&:before{
+		content: "Selected";
+		color: $brand-green;
+		position: absolute;
+		right: 10px;
+		font-size: 0.9em;
+		font-weight: 600;
+	}
+}
+
+[data-select="selected"]>a,
+[data-select="selected"]>a.jstree-clicked{
+	background: $brand-light-blue;
+	position: relative;
+	padding-right: 65px !important;
+
+	box-shadow: none;
+	background: $divider-color;
+	&:after{
+		font-family: 'Line Awesome Free';
+	    font-weight: 900;
+		-webkit-font-smoothing: antialiased;
+	    display: inline-block;
+	    font-style: normal;
+	    font-variant: normal;
+	    text-rendering: auto;
+	    line-height: 1.44;
+		font-size: 1.2em;
+		content: "\f00c";
+		margin-right: 5px;
+		margin-left: 5px;
+		color: $brand-green;
+	}
+
+	&:before{
+		content: "Current";
+		color: $brand-green;
+		position: absolute;
+		right: 10px;
+		font-size: 0.9em;
+		font-weight: 600;
+	}
+}
+
+
+.tree{
+	// margin-top: 10px;
+	ul{
+		margin-bottom: 5px;
+	}
+	ul>li{
+		margin-top: 5px;
+		border: solid $divider-color 1px;
+		padding: 5px;
+		margin-bottom: 10px;
+		background-color: #ebedf3;
+		// background: #ebedf3;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&.dashboard-tree{
+		zoom: 0.8;
+		
+		&.jstree-default .jstree-clicked{
+			padding-right: 5px !important;
+
+			
+
+			&:before{
+				content: "";
+			}
+		}
+	}
+
+
+}
+
+.jstree-node.jstree-open{
+	border: solid $brand-blue 1px;
+
+	&>a{
+		color: $brand-blue;
+	}
+	
+}
+
+.jstree-default .jstree-anchor{
+	padding: 5px 10px;
+	height: auto;
+	transition: $transition;
+}
+
+.level-selector-container{
+	margin-top: 10px;
+	max-height: 400px;
+	 overflow: auto;
+	 border: solid $input-border-color 1px;
+	 padding: 10px 20px;
+	// background: #ebedf3;
+}
+
+.jstree-default .jstree-node{
+	background: #fff;
+}
