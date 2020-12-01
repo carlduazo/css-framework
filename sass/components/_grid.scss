@@ -1,0 +1,86 @@
+/*  SECTIONS  */
+.row {
+    clear: both;
+    padding: 0px;
+    margin: 0px -15px;
+
+    /*  GROUPING  */
+    &.group:before,
+    &.group:after { content:""; display:table; }
+    &.group:after { clear:both;}
+    &.group { zoom:1; /* For IE 6/7 */ }
+
+    &.contact{
+        margin-bottom: 15px;
+    }
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    padding: 0 15px;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GRID OF TWELVE  */
+.span12 {
+    width: 100%;
+}
+
+.span11 {
+    width: 91.66%;
+}
+.span10 {
+    width: 83.33%;
+}
+
+.span9 {
+    width: 75%;
+}
+
+.span8 {
+    width: 66.66%;
+}
+
+.span7 {
+    width: 58.33%;
+}
+
+.span6 {
+    width: 50%;
+}
+
+.span5 {
+    width: 41.66%;
+}
+
+.span4 {
+    width: 33.33%;
+}
+
+.span3 {
+    width: 25%;
+}
+
+.span2 {
+    width: 16.66%;
+}
+
+.span1 {
+    width: 8.333%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 769px) {
+    .col {  margin: 1% 0 1% 0%; }
+    
+    .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+    width: 100%; 
+    }
+}
+
+.row.dt-table{
+    margin: 0 -25px;
+}

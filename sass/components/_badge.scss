@@ -1,0 +1,27 @@
+.badge{
+	font-size: 0.8em;
+	background: $brand-ultra-light-gray;
+	color: text-color;
+	padding: 5px 10px;
+	white-space: nowrap;
+	&.red{
+		background: lighten($brand-red, 35%);
+		color: $brand-red;
+	}
+
+	&.green{
+		background: lighten($brand-green, 40%);
+		color: $brand-green;
+	}
+
+	&.orange{
+		background: lighten($brand-orange, 40%);
+		color: $brand-orange;
+	}
+
+	&.blue{
+		background: lighten($brand-blue, 45%);
+		color: $brand-blue;
+	}
+
+}

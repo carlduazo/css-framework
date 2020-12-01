@@ -1,0 +1,40 @@
+.img-holder{
+    position: relative;
+    overflow: hidden;
+    &.round{
+        border-radius: 50%
+    }
+
+    &.default-img-holder{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.img-full-width{
+    width: 100%;
+    height: auto;
+}
+
+.img-auto-place{
+    position: absolute;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.img-vertical-oriented{
+    height: 100%;
+    width: auto;
+}
+
+.img-horizontal-oriented{
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,641 @@
+.app.minimize-semi{
+	.profile-aside{
+		width: 100px;
+		min-width: 100px;
+
+		&>.box{
+			padding: 40px 0;
+		}
+
+		.company-info-summary{
+			.name, .address, .status{
+				display: none;
+			}
+		}
+
+		.stats{
+			display: none;
+		}
+
+		.profile-menu{
+			margin-top: 0;
+			.desc{
+				display: none;
+			}
+
+			.menu-item-wrap{
+				display: block;
+			}
+
+			.name-wrap{
+				margin-left: 0;
+				text-align: center;
+
+				.name{
+					font-size: 0.8em;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+}
+
+
+.app.tabular{
+	.profile-wrap{
+		display: block;
+	}
+	.profile-aside{
+		width: 100%;
+		min-width: 100%;
+		background: #fff;
+		border-right: 0;
+		border-bottom: solid $divider-color 1px;
+		.parent-company{
+			display: block; 
+			position: absolute;
+			 top: 10px; 
+			 right: 50px; 
+			 left: auto;
+			 width: 30px; 
+			 height: 30px;
+
+			 .img-holder{
+			 	width: 30px;
+			 	height: 30px;
+			 }
+		}
+		.box.relative{
+			padding-bottom: 0px;
+			padding-top: 20px;
+		}
+		.profile-menu{
+			width: calc( 100% + 40px);
+			padding: 0 20px;
+			margin: 0 -20px;
+			&.is_stuck{
+				margin-top: 0;
+				border-bottom: solid $divider-color 1px;
+			}
+			ul{
+				display: flex;
+				.icon{
+					display: none;
+				}
+				.desc{
+					display: none;
+				}
+
+				&>li{
+					margin-bottom: 0;
+				}
+
+				&>li>a.active{
+					&:after{
+						position: absolute;
+					    bottom: -11px;
+					    left: calc(50% - 12.5px);
+					    right: auto;
+					    top: auto;
+					    content: "";
+					    width: 0;
+					    height: 0;
+					    border-style: solid;
+					    border-width: 12px 0 12px 11px;
+					    border-color: transparent transparent transparent $brand-light-blue;
+					
+						border-width: 12px 12px 0 11px;
+						border-color: $brand-light-blue transparent transparent transparent;
+					}
+				}
+			}
+		}
+
+		.test{
+			display: flex;
+			margin-bottom: 20px;
+		}
+
+		.company-info-summary{
+			display: flex;
+			flex:1;
+
+			.info{
+				text-align: left;
+				margin-left:20px;
+
+				h5{
+					font-size: 1.6em;
+				}
+			}
+
+			.user-image{
+				width: 100px;
+				height: 100px;
+			}
+
+		}
+
+		.stats{
+			&>div{
+				margin: 0 20px;
+
+				h4{
+					font-size: 2em;
+				}
+			}
+		}
+
+		.name-wrap{
+			display: flex;
+			margin-left: 0;
+			.name{
+				margin: auto 0;
+			}
+		}
+	}
+}
+
+.profile-wrap{
+	margin: 0  -10px;
+	background: #fff;
+	&.minimize-aside{
+		.profile-aside{
+			width: 65px;
+
+			&>.box{
+				padding: 40px 0;
+			}
+
+			.company-info-summary{
+				.name, .address, .status{
+					display: none;
+				}
+			}
+
+			.stats{
+				display: none;
+			}
+
+			.profile-menu{
+				margin-top: 0;
+				.name,
+				.desc{
+					display: none;
+				}
+			}
+		}
+	}
+	
+	// &.minimize-semi{
+	// 	.profile-aside{
+	// 		width: 100px;
+
+	// 		&>.box{
+	// 			padding: 40px 0;
+	// 		}
+
+	// 		.company-info-summary{
+	// 			.name, .address, .status{
+	// 				display: none;
+	// 			}
+	// 		}
+
+	// 		.stats{
+	// 			display: none;
+	// 		}
+
+	// 		.profile-menu{
+	// 			margin-top: 0;
+	// 			.desc{
+	// 				display: none;
+	// 			}
+
+	// 			.menu-item-wrap{
+	// 				display: block;
+	// 			}
+
+	// 			.name-wrap{
+	// 				margin-left: 0;
+	// 				text-align: center;
+
+	// 				.name{
+	// 					font-size: 0.8em;
+	// 					font-weight: normal;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	
+
+	// &.tabular{
+	// 	display: block;
+	// 	.profile-aside{
+	// 		width: 100%;
+	// 		background: #fff;
+	// 		border-right: 0;
+	// 		border-bottom: solid $divider-color 1px;
+	// 		.parent-company{
+	// 			display: block; 
+	// 			position: absolute;
+	// 			 top: 10px; 
+	// 			 right: 50px; 
+	// 			 left: auto;
+	// 			 width: 30px; 
+	// 			 height: 30px;
+
+	// 			 .img-holder{
+	// 			 	width: 30px;
+	// 			 	height: 30px;
+	// 			 }
+	// 		}
+	// 		.box.relative{
+	// 			padding-bottom: 0px;
+	// 			padding-top: 20px;
+	// 		}
+	// 		.profile-menu{
+	// 			width: calc( 100% + 40px);
+	// 			padding: 0 20px;
+	// 			margin: 0 -20px;
+	// 			&.is_stuck{
+	// 				margin-top: 0;
+	// 			}
+	// 			ul{
+	// 				display: flex;
+	// 				.icon{
+	// 					display: none;
+	// 				}
+	// 				.desc{
+	// 					display: none;
+	// 				}
+
+	// 				&>li{
+	// 					margin-bottom: 0;
+	// 				}
+
+	// 				&>li>a.active{
+	// 					&:after{
+	// 						position: absolute;
+	// 					    bottom: -11px;
+	// 					    left: calc(50% - 12.5px);
+	// 					    right: auto;
+	// 					    top: auto;
+	// 					    content: "";
+	// 					    width: 0;
+	// 					    height: 0;
+	// 					    border-style: solid;
+	// 					    border-width: 12px 0 12px 11px;
+	// 					    border-color: transparent transparent transparent $brand-light-blue;
+						
+	// 						border-width: 12px 12px 0 11px;
+	// 						border-color: $brand-light-blue transparent transparent transparent;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+
+	// 		.test{
+	// 			display: flex;
+	// 			margin-bottom: 20px;
+	// 		}
+
+	// 		.company-info-summary{
+	// 			display: flex;
+	// 			flex:1;
+
+	// 			.info{
+	// 				text-align: left;
+	// 				margin-left:30px;
+
+	// 				h5{
+	// 					font-size: 1.6em;
+	// 				}
+	// 			}
+
+	// 			.user-image{
+	// 				width: 100px;
+	// 				height: 100px;
+	// 			}
+
+	// 		}
+
+	// 		.stats{
+	// 			&>div{
+	// 				margin: 0 20px;
+
+	// 				h4{
+	// 					font-size: 2em;
+	// 				}
+	// 			}
+	// 		}
+
+	// 		.name-wrap{
+	// 			display: flex;
+	// 			margin-left: 0;
+	// 			.name{
+	// 				margin: auto 0;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	.profile-aside{
+		width: 325px;
+		min-width: 325px;
+		border-right: solid $divider-color 1px;
+		transition: $transition;
+		position: relative;
+		z-index: 3;
+
+		.parent-company{
+			display: block; 
+			position: absolute;
+			 top: 10px; 
+			 left: 10px; 
+			 width: 30px; 
+			 height: 30px;
+
+			 .img-holder{
+			 	width: 30px;
+			 	height: 30px;
+			 }
+		}
+
+		&>.box{
+			padding: 40px 20px;
+			box-shadow: none;
+
+		}
+		.user-image{
+			margin: auto;
+		}
+		.profile-short-info{
+			margin-top: 20px;
+			font-size: 0.9em;
+			.detail{
+				margin-bottom: 10px;
+			}
+		}
+		.stats{
+			margin-bottom: 20px;
+		}
+
+		.profile-menu{
+			font-size: 0.9em;
+			background: $brand-white;
+			ul>li{
+				margin-bottom: 10px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				&>a{
+					transition: $transition;
+					text-align: left;
+					display: block;
+					padding: 12px 15px;
+					position: relative;
+					&.active{
+						background: $brand-light-blue;
+						color: $brand-blue;
+
+						&:after{
+							position: absolute;
+						    right: -11px;
+						    top: calc(50% - 12.5px);
+						    content: "";
+						    width: 0;
+						    height: 0;
+						    border-style: solid;
+						    border-width: 12px 0 12px 11px;
+						    border-color: transparent transparent transparent $brand-light-blue;
+						}
+
+
+						.desc{
+							color: $brand-blue;
+						}
+
+					}
+
+					.name{
+						font-weight: 500;
+					}
+
+					.desc{
+						font-size: 0.9em;
+						margin-top: 2px;
+						color: $brand-light-gray;
+					}
+
+					&:not(.active):hover{
+						background: $divider-color;
+					}
+				}
+			}
+		}
+
+
+	}
+
+	.profile-content{
+		position: relative;
+		z-index: 2;
+		flex: 1;
+		&>.box{
+			padding: 20px;
+			box-shadow: none;
+
+			.box-header{
+				padding: 15px 20px;
+				border-bottom: solid $divider-color 1px;
+				margin: -20px -20px 0 -20px;
+				border-left: 0;
+    			margin: -20px -20px 0 -20px;
+			}
+		}
+
+		.zoomed-out{
+			zoom: 0.8;
+			margin-left: -5px;
+			margin-right: -5px;
+			width: calc(100% + 10px);
+		}
+
+		.read-only{
+			.action-title{
+				display: none;
+			}
+
+			.ui.selection.dropdown > .text:not(.default) .img-item{
+				display: block;
+			}
+
+			label,
+			.ui.dropdown{
+				cursor: not-allowed;
+        		pointer-events: none;
+			}
+
+			.flex-checkbox-group{
+				cursor: not-allowed;
+	            pointer-events: none;
+	            &>div{
+	            	margin-right: 10px;
+	            }
+				.ui.checkbox{
+					input ~ label{
+						display: none !important;
+						padding: 5px 15px;
+						background: $divider-color;
+						color: $text-color;
+					}
+
+					input:checked ~ label{
+						display:  block !important;
+					}
+
+
+					label:before,
+					label:after{
+						display: none;
+						cursor: not-allowed;
+	            		pointer-events: none;
+					}
+				}
+			}
+
+			.form-group-inline{
+				.col.span4{
+					width: 8.333%;
+					.ui.dropdown{
+						.text{
+							overflow: unset;
+							margin-top: 2px;
+						}
+					}
+				}
+			}
+
+			.suffix-input{
+				.field{
+					text-align: right;
+					padding-right: 0;
+				}
+
+				.suffix{
+					background: transparent;
+					font-size: 13px;
+					font-weight: normal;
+				}
+
+				&.prefix{
+					.field{
+						text-align: left;
+					}
+				}
+			}
+
+			
+
+			.table.bordered{
+				cursor: not-allowed;
+            	pointer-events: none;
+			}
+
+			.label-instructions{
+				display: none;
+			}
+
+			.ui.checkbox.switch-enable{
+
+			}
+
+			.selector-wrap{
+				display: none;
+			}
+
+			.add-record-wrap{
+				display: none;
+			}
+			.form{
+				&.form-horizontal{
+					margin-bottom: 5px;
+				}
+				.field,
+				.ui.checkbox.switch-enable{
+					border: 0;
+					cursor: not-allowed;
+            		pointer-events: none;
+            		background: transparent;
+				}
+
+				.ui.selection.dropdown{
+					border: 0;
+					cursor: not-allowed;
+            		pointer-events: none;
+            		.icon{
+            			display: none;
+            		}
+
+            		&.disabled{
+            			opacity: 1;
+            		}
+
+            		.sub-text{
+            			display: none;
+            		}
+				}
+
+				[data-alt-switch]{
+					display: none;
+				}
+
+				&.form-read-only{
+			        .field,
+			        .ui.selection.dropdown
+			        {
+			            background: transparent;
+			            cursor: not-allowed;
+			            pointer-events: none;
+			        }
+			        
+			    }
+
+			    ::-webkit-input-placeholder{
+		            color: transparent;
+		            font-weight: 300;
+		        }
+
+		        ::-moz-input-placeholder{
+		            color: transparent;
+		            font-weight: 300;
+		        }
+		        ::-ms-input-placeholder{
+		            color: transparent;
+		            font-weight: 300;
+		        }
+			}
+			.image-upload-control{
+				.display-photo-mode{
+					display: block;
+				}
+
+				.edit-photo-mode{
+					display: none;
+				}
+			}
+
+			.upload-reqs{
+				display: none;
+			}
+		}
+
+		.user-image-avatar-form,
+		.user-image{
+			position: relative;
+			width: 120px;
+			height: 120px;
+		}
+	}
+}

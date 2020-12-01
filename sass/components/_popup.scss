@@ -1,0 +1,22 @@
+.ui.popup{
+	border: 1px solid $input-border-color;
+    padding: 10px;
+    color: $text-color;
+}
+
+.ui.popup > .header + .content{
+	 padding-top: 0.4em;
+	 font-size: 0.9em;
+}
+
+.ui.popup > .header{
+	font-family: $font-family;
+	color: $text-color;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.ui.right.center.popup:before{
+	-webkit-box-shadow: -1px 1px 0px 0px $input-border-color;
+    box-shadow: -1px 1px 0px 0px $input-border-color;
+}

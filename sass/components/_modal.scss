@@ -1,0 +1,40 @@
+.ui.dimmer{
+	z-index: 2000;
+	&.photo-viewer{
+		.img-holder{
+			position: relative;
+		    width: 80vh;
+		    max-width: 80vh;
+		    padding-top: 100%;
+		}
+	}
+}
+
+.ui.modal{
+	border-radius: $default-border-radius;
+	&.tiny{
+		max-width: 450px;
+		padding: 20px;
+	}
+	.response{
+		// display: flex;
+	    padding: 5px;
+	    padding-bottom: 5px;
+    	padding-top: 5px;
+	    text-align: center;
+	    justify-content: center;
+	}
+
+	.modal-hero{
+		margin: -40px -40px 20px -39px;
+	}
+
+	
+
+	&>.content{
+		padding: 0;
+		&.content-padded{
+			padding: 40px;
+		}
+	}
+}

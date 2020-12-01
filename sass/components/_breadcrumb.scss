@@ -1,0 +1,37 @@
+
+.breadcrumb{
+    padding: 5px 0px;
+    font-weight: 500;
+    display: flex;
+    width: 100%;
+    margin: auto 0;
+    font-size: 13px;
+    .breadcrumb-group{
+        // display: flex;
+        line-height: 1.66;
+    }
+
+    .icon{
+        margin: auto;
+        color: $brand-light-gray;
+    }
+
+    .section{
+        color: $brand-light-gray;
+        font-weight: 300;
+        margin: auto;
+        &.active{
+            color: $brand-blue;
+            font-weight: 600;
+            font-size: 1em;
+            display: inline;
+        }
+    }
+
+    .divider{
+        padding: 0 5px;
+        font-weight: bold;
+    }
+
+    
+}

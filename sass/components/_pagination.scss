@@ -1,0 +1,23 @@
+.pagination{
+	display: flex;
+	ul{
+		margin: 0 auto;
+		li{
+			margin: auto 5px;
+
+			a{
+				background: $brand-white;
+				border-radius: $default-border-radius;
+				padding: 5px 10px;
+				min-width: 30px;
+				display: inline-block;
+				text-align: center;
+				&.active{
+					background: $brand-blue;
+					color: #fff;
+					cursor: default;
+				}
+			}
+		}
+	}
+}
